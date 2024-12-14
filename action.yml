@@ -5,6 +5,12 @@ inputs:
   path:
     description: "directory where the game to be convert is"
     required: true
+  pathSWF:
+    description: "swf game directory from path"
+    required: true
+  elementID:
+    description: "Html element id for the game"
+    required: true
 runs:
   using: "node20"
   main: "index.js"
