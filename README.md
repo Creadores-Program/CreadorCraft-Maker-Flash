@@ -9,11 +9,10 @@
 
 Github Action to convert your flash game to CreatorCraft game!
 
-You can now package your CreatorCraft game on Github!
-
 If you want to know how to create a game in CreadorCraft I recommend you check out the [CreadorCraft Maker wiki](https://creadorcraft-maker.blogspot.com/p/documentacionwiki.html) you can also run many programming languages for your game!
 
 ## Example Work
+You need a Flash game file .swf
 ```yml
 name: CI
 
@@ -25,8 +24,14 @@ jobs:
     if: ${{ !contains(github.event.head_commit.message, '[ci skip]') }}
     steps:
       - uses: actions/checkout@v4
+      - name: CreadorCraft-Maker-Flash
+        uses: Creadores-Program/CreadorCraft-Maker-Flash@v1.0.0
+        with:
+          path: "./src" # Dir by game: This does not generate CSS or HTML or the manifest, the manifest in JS must be main.js
+          pathSWF: "game.swf" #Game Path from Previous Path
+          elementID: 'Test' #Html element ID to put the flash game
       - name: CreadorCraft-Maker
-        uses: Creadores-Program/CreadorCraft-Maker-GHA@v1
+        uses: Creadores-Program/CreadorCraft-Maker-GHA@v1.1.0
         with:
           path: "./src"
       - name: Upload Artifact
@@ -35,26 +40,6 @@ jobs:
           name: My Game Example
           path: gameBuildCCM/TestName 1.0.0.creadorcraftgame.zip
 ```
-
-### Structure Repo:
-myName/RepoGameName/src
-
-   - manifest.json:
-   ```json
-   {
-    "name": "TestName",
-    "description": "Test game",
-    "version": "1.0.0",
-    "mainHtml": "index.html",//dir main html file
-    "mainCSS": "index.css",
-    "mainJS": "index.js"
-   }
-   ```
-   - index.html
-   - index.css
-   - index.js
-
-more info in Wiki!
 
 Made in Mexico.
 
