@@ -20,10 +20,10 @@ $.getScript("https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.1.0-nightly.2024.1
         GameProps.exitGame();
       });
       GameProps.addEventListener("pauseEvent", function(){
-        player.suspend();
+        player.ruffle().suspend();
       });
       GameProps.addEventListener("resumeEvent", function(){
-        player.resume();
+        player.ruffle().resume();
       });
     }).catch(function(error){
       alert("Error Load Game!"+error);
