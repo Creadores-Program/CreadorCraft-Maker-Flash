@@ -4,6 +4,7 @@ $.getScript("https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.1.0-nightly.2024.1
     let player = ruffle.createPlayer();
     let container = document.getElementById("{elementID}");
     player.style.top = "0%";
+    player.style.margin = "0 auto";
     container.appendChild(player);
     GameProps.getFileGame().file("{FileSWF}").async("blob").then(function(GFlashBl){
       let GFlashUrl = URL.createObjectURL(GFlashBl);
