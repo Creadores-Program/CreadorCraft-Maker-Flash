@@ -1,9 +1,9 @@
-name: "CreadorCraft-Maker"
+name: "CreadorCraft-Maker-Flash"
 author: "Creadores Program"
-description: "Github Action to package your CreadorCraft game!"
+description: "Github Action to convert your flash game to CreadorCraft game!"
 inputs:
   path:
-    description: "directory where the game to be packaged is"
+    description: "directory where the game to be convert is"
     required: true
 runs:
   using: "node20"
