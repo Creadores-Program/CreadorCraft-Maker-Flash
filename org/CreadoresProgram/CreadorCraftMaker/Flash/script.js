@@ -4,7 +4,6 @@ $.getScript("https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.1.0-nightly.2024.1
     let player = ruffle.createPlayer();
     let container = document.getElementById("{elementID}");
     player.style.width = "100%";
-    player.style.height = "100%";
     player.style.top = "0%";
     player.style.left = "0%";
     container.appendChild(player);
@@ -16,6 +15,12 @@ $.getScript("https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.1.0-nightly.2024.1
       }).catch(function(error){
         alert("Error Load Game!"+error);
         GameProps.exitGame();
+      });
+      GameProps.addEventListener("pauseEvent", function(){
+        player.suspend();
+      });
+      GameProps.addEventListener("resumeEvent", function(){
+        player.resume();
       });
     }).catch(function(error){
       alert("Error Load Game!"+error);
