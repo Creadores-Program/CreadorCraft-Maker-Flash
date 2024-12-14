@@ -1,4 +1,4 @@
-$.getScript("https://unpkg.com/@ruffle-rs/ruffle", function(){
+$.getScript("https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.1.0-nightly.2024.12.14/ruffle.min.js", function(){
   window.addEventListener("load", function(){
     let ruffle = window.RufflePlayer.newest();
     let player = ruffle.createPlayer();
