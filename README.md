@@ -1,4 +1,4 @@
-# CreadorCraft-Maker-GHA
+# CreadorCraft-Maker-Flash
 
 ![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![Github Actions](https://img.shields.io/badge/Github%20Actions-282a2e?style=for-the-badge&logo=githubactions&logoColor=367cfe)
@@ -7,7 +7,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Json](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 
-Github Action to package your CreatorCraft game!
+Github Action to convert your flash game to CreatorCraft game!
 
 You can now package your CreatorCraft game on Github!
 
