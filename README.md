@@ -31,7 +31,7 @@ jobs:
           pathSWF: "game.swf" #Game Path from Previous Path
           elementID: 'Test' #Html element ID to put the flash game
       - name: CreadorCraft-Maker
-        uses: Creadores-Program/CreadorCraft-Maker-GHA@v1.1.0
+        uses: Creadores-Program/CreadorCraft-Maker-GHA@v1.2.0
         with:
           path: "./src"
       - name: Upload Artifact
@@ -43,4 +43,4 @@ jobs:
 
 Made in Mexico.
 
-Creadores Program © 2024
+Creadores Program © 2025
